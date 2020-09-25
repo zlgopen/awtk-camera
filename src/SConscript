@@ -1,0 +1,10 @@
+import os
+import platform
+
+env=DefaultEnvironment().Clone()
+LIB_DIR=os.environ['LIB_DIR'];
+BIN_DIR=os.environ['BIN_DIR'];
+
+SOURCES = Glob("*.c") + Glob("v4l2/*.cpp") + Glob("decoders/*.c") + Glob("decoders/*.cpp")
+env.Library(os.path.join(LIB_DIR, 'camera_device_v4l2'), SOURCES);
+
