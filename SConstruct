@@ -14,4 +14,4 @@ helper.add_libs(['camera_device_v4l2', 'v4l2cpp', 'yuv', 'jpeg'])
 helper.add_cpppath(APP_CPPPATH).call(DefaultEnvironment)
 
 SConscriptFiles = ['src/SConscript', '3rd/SConscript', 'demos/SConscript']
-SConscript(SConscriptFiles)
+helper.SConscript(SConscriptFiles)
